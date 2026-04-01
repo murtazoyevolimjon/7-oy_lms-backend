@@ -26,18 +26,18 @@ jobs:
             mkdir -p /root
             cd /root
 
-            if [ ! -d "crmbackend7/.git" ]; then
+            if [ ! -d "crm-backend/.git" ]; then
               echo "Cloning repository!"
-              git clone https://github.com/XushvaqtovSardor/crmbackend7
+              git clone https://github.com/murtazoyevolimjon/crm-backend
             else
               echo "Pulling latest changes!"
-              cd crmbackend7
+              cd crm-backend
               git pull origin main
               cd ..
             fi
 
             # ALWAYS enter project directory
-            cd crmbackend7
+            cd crm-backend
 
             echo "Stopping containers"
             docker compose down
